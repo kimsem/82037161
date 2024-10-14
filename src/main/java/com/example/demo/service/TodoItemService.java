@@ -30,7 +30,7 @@ public class TodoItemService {
     private final TodoItemReferenceRepository todoItemReferenceRepository;
 
     /**
-     * 전체 TodoItem 목록 가져오기
+     * 전체 TodoItem 목록 가져오기..
      *
      * @param pageable
      * @return
@@ -218,7 +218,7 @@ public class TodoItemService {
 
         // 참조하는 TodoItem 이 있는 경우
         if (todoItemReferenceRepository.existsTodoReferencesByCurrentTodoItemId(id)) {
-            throw new RuntimeException("참조하는 TodoItem 항목이 있습니다.");
+            throw new RuntimeException("참조하는 TodoItem 항목이 있습니다...");
         }
 
         // 자신을 참조하는 TodoItem 이 있는 경우
