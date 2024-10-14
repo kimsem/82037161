@@ -1,12 +1,12 @@
 spring:
-  config:
-    activate:
-      on-profile: prod
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://ce-aa-psql.postgres.database.azure.com:5432/postgres
     username: ktds
     password: Ktds!1234
+    hikari:
+      maximum-pool-size: 2
+      minimum-idle: 2
   jpa:
     show-sql: true
     hibernate:
@@ -18,8 +18,9 @@ spring:
         format_sql: true
   sql:
     init:
-      mode: always
-#      mode: embedded
+      # mode: always
+      mode: embedded
+
 server:
   port: 8080
 
@@ -28,3 +29,6 @@ management:
     web:
       exposure:
         include: "*"
+
+pvc:
+  path: /mnt/cloud-sample
