@@ -27,6 +27,6 @@ spec:
           configMap:
             name: "82037161-configmap"
             items:
-              - key: application.yml
-                path: application.yml
+              - key: application.yaml
+                path: application.yaml
             defaultMode: 420
