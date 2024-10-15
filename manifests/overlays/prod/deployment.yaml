@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: "82037161"
-          command: ["java","-jar","/app.jar"]
+          command: ["java","-jar","/template-0.0.1-SNAPSHOT.jar"]
           args: ["--spring.config.location=file:/config/application.yml"]
           volumeMounts:
             - mountPath: /mnt/cloud-sample
