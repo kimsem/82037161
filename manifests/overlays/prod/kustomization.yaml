@@ -1,6 +1,6 @@
 configMapGenerator:
   - files:
-      - application.yaml
+      - application.yml
     name: "82037161-configmap"
 resources:
   - ../../base
