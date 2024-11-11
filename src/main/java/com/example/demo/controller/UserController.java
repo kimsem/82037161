@@ -14,10 +14,10 @@ public class UserController {
     @GetMapping("/api/v1/user")
     public Map<String, String> getUserNo(HttpServletRequest request) {
 
-        // 사번이 포함된 도메인 네임(ex: [사번].ce-aa.kubepia.net)
+        // 사번이 포함된 도메인네임(ex: [사번].ce-aa.kubepia.net)
         String serverName = request.getServerName();
 
-        // 도메인네임에서 사번만 추출
+        // 도메인네임에서 사번만 추출함
         String userNo = serverName.split("\\.")[0];
 
         Map<String, String> response = new HashMap<>();
